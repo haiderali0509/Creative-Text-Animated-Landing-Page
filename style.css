@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'monument';
+    src: url(./Font/MonumentExtended-Ultrabold.otf);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7f7f7;
+    color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.scroll-div {
+    /* height: 100%; */
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+#scroll-div1 {
+    position: absolute;
+    top: 20%;
+}
+
+#scroll-div1 h1 {
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll-div2 {
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    background-color: transparent;
+    color: transparent;
+}
+
+#scroll-div2 h1 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#scroll-div3 {
+    position: absolute;
+    top: 60%;
+}
+
+#scroll-div3 h1 {
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+.scroll-div::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    width: 100%;
+    width: 340px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: 'monument';
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(calc(-100% - 30px));
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+
+}
